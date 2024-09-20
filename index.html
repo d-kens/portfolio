@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Onyango Dickens</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <h1>&lt;Onyango /&gt;</h1>
+    </div>
+    <div class="nav-right">
+      <h2>Portfolio</h2>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Terminal Section -->
+    <div class="terminal">
+      <div id="output">
+        <p>Welcome to Onyango's CLI Portfolio! Type <span class="highlight">help</span> to get started.</p>
+      </div>
+
+      <!-- persistent help hint -->
+      <p class="help-hint">Type <span class="highlight">help</span> for available commands.</p>
+
+      <div class="input-line">
+        <span class="prompt">$</span>
+        <input id="command-input" type="text" autofocus autocomplete="off" placeholder="Enter your command">
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

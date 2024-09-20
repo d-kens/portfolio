@@ -1,0 +1,99 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1d1f21;
+  color: #c5c8c6;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #282a36;
+  border-bottom: 2px solid #44475a;
+}
+
+.nav-left h1, .nav-right h2 {
+  color: #b5bd68;
+  margin: 0;
+}
+
+.nav-left h1 {
+  font-size: 24px;
+}
+
+.nav-right h2 {
+  font-size: 20px;
+}
+
+.container {
+  width: 80%;
+  max-width: 1000px;
+  margin-top: 20px;
+}
+
+/* Terminal Styling */
+.terminal {
+  background-color: #1d1f21;
+  border: 2px solid #c5c8c6;
+  padding: 20px;
+  width: 100%;
+}
+
+#output {
+  min-height: 400px;
+  margin-bottom: 10px;
+}
+
+/* Persistent Help Hint Styling */
+.help-hint {
+  color: #969896;
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+}
+
+.prompt {
+  color: #b5bd68;
+  margin-right: 10px;
+}
+
+input {
+  background-color: #1d1f21;
+  color: #c5c8c6;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: #969896;
+}
+
+.hidden {
+  display: none;
+}
+
+.highlight {
+  color: #b5bd68;
+}
