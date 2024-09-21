@@ -15,6 +15,14 @@ body {
   height: 100vh;
 }
 
+.output-title {
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
 /* Navigation Bar Styling */
 .navbar {
   width: 100%;
@@ -22,8 +30,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
-  background-color: #282a36;
-  border-bottom: 2px solid #44475a;
+  background-color: transparent;
 }
 
 .nav-left h1, .nav-right h2 {
@@ -35,9 +42,20 @@ body {
   font-size: 24px;
 }
 
-.nav-right h2 {
-  font-size: 20px;
+.nav-right {
+  display: flex;
+  gap: 15px; /* Add space between links */
 }
+
+.nav-right a {
+  color: #b5bd68;
+  text-decoration: none; /* Remove underline */
+}
+
+.nav-right a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
 
 .container {
   width: 80%;

@@ -1,15 +1,16 @@
-// Reference to the command input and output area
 const commandInput = document.getElementById('command-input');
 const outputArea = document.getElementById('output');
 
-// List of valid commands and their functions
+
+// List of commands
 const commands = {
   'help': showHelp,
   'about': showAbout,
   'projects': showProjects,
   'skills': showSkills,
   'contact': showContact,
-  'clear': clearScreen
+  'clear': clearScreen,
+  'education': showEducation
 };
 
 // Command history management
@@ -43,7 +44,7 @@ commandInput.addEventListener('keydown', function (event) {
 
 // Handles executing a command and clearing previous output
 function handleCommand(command) {
-  clearScreen(); // Clears previous terminal output first
+  clearScreen();
 
   if (commands[command]) {
     commands[command]();
@@ -55,8 +56,9 @@ function handleCommand(command) {
 // Command functions
 function showHelp() {
   outputArea.innerHTML = `
-    <p>Available commands:</p>
+    <p class="output-title">Available commands:</p>
     <p><span class="highlight">about</span> - Learn more about me</p>
+     <p><span class="highlight">education</span> - Education</p>
     <p><span class="highlight">projects</span> - See my projects</p>
     <p><span class="highlight">skills</span> - See my skills</p>
     <p><span class="highlight">contact</span> - Get my contact information</p>
@@ -66,33 +68,45 @@ function showHelp() {
 
 function showAbout() {
   outputArea.innerHTML = `
-    <p>Hi, I'm Onyango Dickens Omondi, a software developer specializing in Angular and Java development.</p>
-    <p>I love creating interactive web applications and exploring new technologies in AI and cloud computing.</p>
+    <p class="output-title">About</p>
+    <p>I am a dedicated Software Engineer with a passion for leveraging technology to drive social impact. With a keen interest in developing efficient and effective solutions, I aim to address the challenges faced by communities and enhance their quality of life.</p>
   `;
+}
+
+function showEducation() {
+  outputArea.innerHTML = `
+  <p class="output-title">Education</p>
+  <p><span class="highlight">Strathmore University</span>: Bsc Infomations and Computer Science</p>
+  <p><span class="highlight">St Michael's Secondary School</span>: Kenya Certificate of Secondary Education</p>
+`;
 }
 
 function showProjects() {
   outputArea.innerHTML = `
-    <p>Here are some of my projects:</p>
-    <p><span class="highlight">Project 1</span>: AI-powered Study Guide - A platform that helps students prepare for exams using AI.</p>
-    <p><span class="highlight">Project 2</span>: Courier Management System - A system for managing courier and delivery services in Kenya.</p>
+    <p class="output-title">Here are some of my projects:</p>
+    <p><span class="highlight">Project 1</span>: Tomato Disease Classification Model ....</p>
+    <p><span class="highlight">Project 2</span>: Sorting Algorithm Visualizer ....</p>
+    <p><span class="highlight">Project 2</span>: Task Tracker ....</p>
   `;
 }
 
 function showSkills() {
   outputArea.innerHTML = `
-    <p>Technical Skills:</p>
-    <p><span class="highlight">Languages</span>: Java, JavaScript, TypeScript</p>
-    <p><span class="highlight">Frameworks</span>: Angular, NestJS, Spring Boot</p>
-    <p><span class="highlight">Tools</span>: Docker, Firebase, Git</p>
+    <p class="output-title">Technical Skills:</p>
+    <p><span class="highlight">Languages</span>: Java, SQL, JavaScript, TypeScript, HTML, CSS</p>
+    <p><span class="highlight">Frameworks</span>: Springboot, Nest JS, Angular, Laravel</p>
+    <p><span class="highlight">Tools</span>: Docker, MySQL, Git, Linux Command Line</p>
+    <p><span class="highlight">Soft skills</span>: Problem Solving, Collaboration and Teamwork, Time managemnet</p>
   `;
 }
 
 function showContact() {
   outputArea.innerHTML = `
-    <p>Contact Information:</p>
-    <p><span class="highlight">Email</span>: onyango@example.com</p>
-    <p><span class="highlight">LinkedIn</span>: <a href="https://www.linkedin.com/in/onyango" target="_blank">linkedin.com/in/onyango</a></p>
+    <p class="output-title">Contact Information:</p>
+
+    <p><span class="highlight">Email</span>: dickens.onyango@strathmore.edu</p>
+
+    <p><span class="highlight">LinkedIn</span>: <a href="https://www.linkedin.com/in/onyango-dickens/" target="_blank">linkedin.com/in/onyango</a></p>
   `;
 }
 
