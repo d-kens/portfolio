@@ -86,7 +86,7 @@ function showProjects() {
     <p class="output-title">Here are some of my projects:</p>
     <p><span class="highlight">Project 1</span>: Tomato Disease Classification Model ....</p>
     <p><span class="highlight">Project 2</span>: Sorting Algorithm Visualizer ....</p>
-    <p><span class="highlight">Project 2</span>: Task Tracker ....</p>
+    <p><span class="highlight">Project 3</span>: Task Tracker ....</p>
   `;
 }
 
