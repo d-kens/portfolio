@@ -42,20 +42,41 @@ p {
   font-size: 24px;
 }
 
+/* Navigation Bar Styling */
 .nav-right {
   display: flex;
+  align-items: center;
   gap: 15px; /* Add space between links */
 }
 
-.nav-right a {
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons .icon {
   color: #b5bd68;
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
+  font-size: 20px; /* Adjust icon size */
 }
 
-.nav-right a:hover {
-  text-decoration: underline; /* Underline on hover */
+.toggle-button {
+  background: none;
+  border: none;
+  color: #b5bd68;
+  font-size: 20px; /* Adjust button size */
 }
 
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .toggle-button {
+    display: none; /* Hide toggle button on large screens */
+  }
+}
+
+.hidden {
+  display: none; /* Existing hidden class */
+}
 
 .container {
   width: 80%;
