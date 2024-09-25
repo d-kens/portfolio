@@ -1,3 +1,14 @@
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.querySelector('.toggle-button');
+  const socialIcons = document.querySelector('.social-icons');
+
+  toggleButton.addEventListener('click', () => {
+    socialIcons.classList.toggle('hidden');
+  });
+});
+
+
 const commandInput = document.getElementById('command-input');
 const outputArea = document.getElementById('output');
 
