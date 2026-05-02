@@ -434,7 +434,14 @@ body[data-page="home"] footer { display: none; }
 
 @media (max-width: 600px) {
   .proj-top { gap: 8px; }
-  .proj-actions { margin-left: 0; }
+  .proj-actions { margin-left: 0; width: 100%; }
+  .proj-link {
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    background: var(--card);
+    font-size: 0.75rem;
+  }
 }
 
 /* ===== EXPERIENCE TIMELINE ===== */
