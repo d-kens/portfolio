@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dickens Onyango — Projects">
+  <title>Projects · Dickens Onyango</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="projects">
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Dickens<span>.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-page="home">Home</a></li>
+        <li><a href="skills.html" data-page="skills">Skills</a></li>
+        <li><a href="projects.html" data-page="projects">Projects</a></li>
+        <li><a href="experience.html" data-page="experience">Experience</a></li>
+        <li><a href="contact.html" data-page="contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <main>
+    <div class="sk-header fade-up">
+      <p class="sk-eyebrow">Selected Work</p>
+      <h1 class="sk-title">Things I've worked on</h1>
+    </div>
+
+    <div class="proj-list">
+
+      <div class="proj-item fade-up">
+        <span class="proj-num">01</span>
+        <div class="proj-content">
+          <div class="proj-top">
+            <h2 class="proj-name">Tomato Disease Detection API</h2>
+            <div class="proj-chips">
+              <span class="sk-tag">Computer Vision</span>
+              <span class="sk-tag">Machine Learning</span>
+              <span class="sk-tag">Flask</span>
+              <span class="sk-tag">REST API</span>
+            </div>
+            <div class="proj-actions">
+              <a href="https://github.com/d-kens/mobilevit-flask-api" class="proj-link" target="_blank" rel="noopener">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                Code
+              </a>
+            </div>
+          </div>
+          <p class="proj-desc">Fine-tuned a MobileViT model on tomato leaf imagery to classify four conditions - Early Blight, Late Blight, Septoria Leaf Spot, and Healthy - then wrapped it in a production-ready REST API with JWT authentication, built on Flask and flask-restx.</p>
+        </div>
+      </div>
+
+      <div class="proj-item fade-up">
+        <span class="proj-num">02</span>
+        <div class="proj-content">
+          <div class="proj-top">
+            <h2 class="proj-name">Simpicover</h2>
+            <div class="proj-chips">
+              <span class="sk-tag">Web App</span>
+              <span class="sk-tag">Insurtech</span>
+              <span class="sk-tag">Fintech</span>
+            </div>
+            <div class="proj-actions">
+              <a href="https://policy.dawitdigital.com/" class="proj-link" target="_blank" rel="noopener">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                Live
+              </a>
+            </div>
+          </div>
+          <p class="proj-desc">Contributed to building Simplicover, a digital platform that lets customers purchase insurance products online. The first product shipped was FarijiCare – an accessible, paperless way to get covered for end-of-life expenses without visiting a branch.</p>
+        </div>
+      </div>
+
+      <div class="proj-item fade-up">
+        <span class="proj-num">03</span>
+        <div class="proj-content">
+          <div class="proj-top">
+            <h2 class="proj-name">CarePay Platform</h2>
+            <div class="proj-chips">
+              <span class="sk-tag">Healthtech</span>
+              <span class="sk-tag">Fintech</span>
+              <span class="sk-tag">Backend</span>
+            </div>
+            <div class="proj-actions">
+              <a href="https://carepay.com" class="proj-link" target="_blank" rel="noopener">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                Live
+              </a>
+            </div>
+          </div>
+          <p class="proj-desc">Contributing to the development and maintenance of CarePay's digital health payments platform — a system that connects patients, healthcare providers, and payers to make healthcare accessible and cashless across Africa.</p>
+        </div>
+      </div>
+
+      <div class="proj-item fade-up">
+        <span class="proj-num">04</span>
+        <div class="proj-content">
+          <div class="proj-top">
+            <h2 class="proj-name">Puuul</h2>
+            <div class="proj-chips">
+              <span class="sk-tag">Web App</span>
+              <span class="sk-tag">Fintech</span>
+              <span class="sk-tag">M-Pesa</span>
+            </div>
+            <div class="proj-actions">
+              <a href="https://github.com/d-kens/puuul" class="proj-link" target="_blank" rel="noopener">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                Code
+              </a>
+            </div>
+          </div>
+          <p class="proj-desc">Puuul automates the merry-go-round chama - rotating savings groups that run on trust and spreadsheets. Members save together, contributions are tracked transparently, and payouts are handled without the usual back-and-forth.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
