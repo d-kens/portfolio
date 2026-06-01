@@ -1,4 +1,4 @@
-// Nav scroll shadow
+// ===== NAVBAR =====
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 10);
@@ -12,7 +12,6 @@ const overlay = document.getElementById('navOverlay');
 function openNav() {
   toggle.classList.add('open');
   navLinks.classList.add('open');
-  overlay?.classList.add('open');
   document.body.classList.add('nav-open');
   toggle.setAttribute('aria-expanded', 'true');
 }
@@ -20,7 +19,6 @@ function openNav() {
 function closeNav() {
   toggle.classList.remove('open');
   navLinks.classList.remove('open');
-  overlay?.classList.remove('open');
   document.body.classList.remove('nav-open');
   toggle.setAttribute('aria-expanded', 'false');
 }
@@ -35,19 +33,17 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeNav();
 });
 
-// Close mobile nav on link click
 navLinks?.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', closeNav);
 });
 
-// Active nav link based on current page
+// Active nav link
 const page = document.body.dataset.page;
 navLinks?.querySelectorAll('a[data-page]').forEach(a => {
   if (a.dataset.page === page) a.classList.add('active');
 });
 
-
-// Scroll-triggered fade-up animations
+// ===== SCROLL ANIMATIONS =====
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((e, i) => {
     if (e.isIntersecting) {
@@ -59,7 +55,7 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-// Animate skill bars when visible
+// Animate skill bars
 const barObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -72,4 +68,3 @@ const barObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 
 document.querySelectorAll('.skill-category').forEach(el => barObserver.observe(el));
-
