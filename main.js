@@ -68,3 +68,44 @@ const barObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 
 document.querySelectorAll('.skill-category').forEach(el => barObserver.observe(el));
+
+// ===== COPY TO CLIPBOARD (contact page) =====
+const toast = document.getElementById('cToast');
+let toastTimer;
+function showToast(msg) {
+  if (!toast) return;
+  toast.textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 1800);
+}
+
+document.querySelectorAll('[data-copy]').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const text = btn.dataset.copy;
+    try {
+      await navigator.clipboard.writeText(text);
+      btn.textContent = 'Copied';
+      showToast('Email copied to clipboard');
+    } catch {
+      showToast(text);
+    }
+    setTimeout(() => { btn.textContent = 'Copy'; }, 1800);
+  });
+});
+
+// ===== PROJECT FILTERS =====
+const filters = document.querySelectorAll('.proj-filter');
+filters.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const f = btn.dataset.filter;
+    filters.forEach(b => {
+      const on = b === btn;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-pressed', String(on));
+    });
+    document.querySelectorAll('.proj-item').forEach(item => {
+      item.hidden = f !== 'all' && item.dataset.kind !== f;
+    });
+  });
+});

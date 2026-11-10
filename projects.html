@@ -35,94 +35,122 @@
     <div class="sk-header fade-up">
       <p class="sk-eyebrow">Selected Work</p>
       <h1 class="sk-title">Things I've worked on</h1>
+      <p class="sk-intro">Production platforms I've helped build at work, and side projects where I explore machine learning, authorization and fintech.</p>
+      <div class="proj-filters" role="group" aria-label="Filter projects">
+        <button type="button" class="proj-filter is-active" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="proj-filter" data-filter="work" aria-pressed="false">Work</button>
+        <button type="button" class="proj-filter" data-filter="personal" aria-pressed="false">Personal</button>
+      </div>
     </div>
 
     <div class="proj-list">
-
-      <div class="proj-item fade-up">
+      <article class="proj-item fade-up" data-kind="work">
         <span class="proj-num">01</span>
         <div class="proj-content">
+          <p class="proj-meta">Work · CarePay International · 2025 – Present</p>
+          <div class="proj-top">
+            <h2 class="proj-name">CarePay Platform</h2>
+            <div class="proj-actions">
+              <a href="https://carepay.com" class="proj-link" target="_blank" rel="noopener"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg><span>Live</span></a>
+            </div>
+          </div>
+          <p class="proj-desc">Contributing to the development and maintenance of CarePay platform — a system that connects patients, healthcare providers, and payers to make healthcare accessible.</p>
+          <ul class="proj-highlights">
+            <li>Co-built a versioned sales network structure with draft, approval and audit trail, so insurers manage their own networks</li>
+            <li>Led frontend delivery of annual sales target planning, where targets per business line and unit always add up to the overall goal</li>
+            <li>Automated bulk policy renewal and setup, and supported production releases</li>
+          </ul>
+          <p class="proj-stack"><span>Stack</span>Angular · Java · Spring Boot</p>
+          <div class="proj-chips">
+              <span class="sk-tag">Healthtech</span>
+              <span class="sk-tag">Fintech</span>
+              <span class="sk-tag">Backend</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj-item fade-up" data-kind="work">
+        <span class="proj-num">02</span>
+        <div class="proj-content">
+          <p class="proj-meta">Work · Dawit Insurance · 2024 – 2025</p>
+          <div class="proj-top">
+            <h2 class="proj-name">Simpicover</h2>
+            <div class="proj-actions">
+              <a href="https://policy.dawitdigital.com/" class="proj-link" target="_blank" rel="noopener"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg><span>Live</span></a>
+            </div>
+          </div>
+          <p class="proj-desc">Contributed to building Simplicover, a digital platform that lets customers purchase insurance products online. The first product shipped was FarijiCare — an accessible, paperless way to get covered for end-of-life expenses without visiting a branch.</p>
+          <ul class="proj-highlights">
+            <li>Helped re-architect FarijiCare from a Laravel monolith into event-driven microservices</li>
+            <li>Built and maintained 5 core services: Auth, Products, Underwriting, Notification and Payments</li>
+            <li>Integrated M-Pesa Daraja, Paystack and Supertokens; added a quotation module and automated PDF receipts and certificates</li>
+          </ul>
+          <p class="proj-stack"><span>Stack</span>NestJS · Angular · Docker · M-Pesa · Paystack</p>
+          <div class="proj-chips">
+              <span class="sk-tag">Web App</span>
+              <span class="sk-tag">Insurtech</span>
+              <span class="sk-tag">Fintech</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj-item fade-up" data-kind="personal">
+        <span class="proj-num">03</span>
+        <div class="proj-content">
+          <p class="proj-meta">Personal · Machine learning</p>
           <div class="proj-top">
             <h2 class="proj-name">Tomato Disease Detection API</h2>
-            <div class="proj-chips">
+            <div class="proj-actions">
+              <a href="https://github.com/d-kens/mobilevit-flask-api" class="proj-link" target="_blank" rel="noopener"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg><span>Code</span></a>
+            </div>
+          </div>
+          <p class="proj-desc">Fine-tuned a MobileViT model on tomato leaf imagery to classify four conditions — Early Blight, Late Blight, Septoria Leaf Spot, and Healthy — then wrapped it in a production-ready REST API with JWT authentication, built on Flask and flask-restx.</p>
+          <p class="proj-stack"><span>Stack</span>Python · MobileViT · Flask · flask-restx · JWT</p>
+          <div class="proj-chips">
               <span class="sk-tag">Computer Vision</span>
               <span class="sk-tag">Machine Learning</span>
               <span class="sk-tag">Flask</span>
               <span class="sk-tag">REST API</span>
-            </div>
-            <div class="proj-actions">
-              <a href="https://github.com/d-kens/mobilevit-flask-api" class="proj-link" target="_blank" rel="noopener">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                Code
-              </a>
-            </div>
           </div>
-          <p class="proj-desc">Fine-tuned a MobileViT model on tomato leaf imagery to classify four conditions — Early Blight, Late Blight, Septoria Leaf Spot, and Healthy — then wrapped it in a production-ready REST API with JWT authentication, built on Flask and flask-restx.</p>
         </div>
-      </div>
+      </article>
 
-      <div class="proj-item fade-up">
-        <span class="proj-num">02</span>
-        <div class="proj-content">
-          <div class="proj-top">
-            <h2 class="proj-name">Simpicover</h2>
-            <div class="proj-chips">
-              <span class="sk-tag">Web App</span>
-              <span class="sk-tag">Insurtech</span>
-              <span class="sk-tag">Fintech</span>
-            </div>
-            <div class="proj-actions">
-              <a href="https://policy.dawitdigital.com/" class="proj-link" target="_blank" rel="noopener">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
-                Live
-              </a>
-            </div>
-          </div>
-          <p class="proj-desc">Contributed to building Simplicover, a digital platform that lets customers purchase insurance products online. The first product shipped was FarijiCare — an accessible, paperless way to get covered for end-of-life expenses without visiting a branch.</p>
-        </div>
-      </div>
-
-      <div class="proj-item fade-up">
-        <span class="proj-num">03</span>
-        <div class="proj-content">
-          <div class="proj-top">
-            <h2 class="proj-name">CarePay Platform</h2>
-            <div class="proj-chips">
-              <span class="sk-tag">Healthtech</span>
-              <span class="sk-tag">Fintech</span>
-              <span class="sk-tag">Backend</span>
-            </div>
-            <div class="proj-actions">
-              <a href="https://carepay.com" class="proj-link" target="_blank" rel="noopener">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
-                Live
-              </a>
-            </div>
-          </div>
-          <p class="proj-desc">Contributing to the development and maintenance of CarePay platform — a system that connects patients, healthcare providers, and payers to make healthcare accessible.</p>
-        </div>
-      </div>
-
-      <div class="proj-item fade-up">
+      <article class="proj-item fade-up" data-kind="personal">
         <span class="proj-num">04</span>
         <div class="proj-content">
+          <p class="proj-meta">Personal · Authorization</p>
+          <div class="proj-top">
+            <h2 class="proj-name">spicedb-permission-service</h2>
+          </div>
+          <p class="proj-desc">A permission service backed by SpiceDB, managing a relationship-based authorization (ReBAC) schema and permission checks over gRPC.</p>
+          <p class="proj-stack"><span>Stack</span>SpiceDB · gRPC</p>
+          <div class="proj-chips">
+              <span class="sk-tag">Authorization</span>
+              <span class="sk-tag">SpiceDB</span>
+              <span class="sk-tag">ReBAC</span>
+              <span class="sk-tag">gRPC</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj-item fade-up" data-kind="personal">
+        <span class="proj-num">05</span>
+        <div class="proj-content">
+          <p class="proj-meta">Personal · Fintech</p>
           <div class="proj-top">
             <h2 class="proj-name">Puuul</h2>
-            <div class="proj-chips">
-              <span class="sk-tag">Web App</span>
-              <span class="sk-tag">Fintech</span>
-              <span class="sk-tag">M-Pesa</span>
-            </div>
             <div class="proj-actions">
-              <a href="https://github.com/d-kens/puuul" class="proj-link" target="_blank" rel="noopener">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                Code
-              </a>
+              <a href="https://github.com/d-kens/puuul" class="proj-link" target="_blank" rel="noopener"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg><span>Code</span></a>
             </div>
           </div>
           <p class="proj-desc">Puuul automates the merry-go-round chama — rotating savings groups that run on trust and spreadsheets. Members save together, contributions are tracked transparently, and payouts are handled without the usual back-and-forth.</p>
+          <div class="proj-chips">
+              <span class="sk-tag">Web App</span>
+              <span class="sk-tag">Fintech</span>
+              <span class="sk-tag">M-Pesa</span>
+          </div>
         </div>
-      </div>
+      </article>
 
     </div>
   </main>
