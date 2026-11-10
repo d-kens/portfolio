@@ -9,32 +9,71 @@ const toggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 const overlay = document.getElementById('navOverlay');
 
+const mainEl = document.querySelector('main');
+const footerEl = document.querySelector('footer');
+const mobileQuery = window.matchMedia('(max-width: 800px)');
+const isOpen = () => toggle?.classList.contains('open');
+
+function setBackgroundInert(on) {
+  [mainEl, footerEl].forEach(el => { if (el) el.inert = on; });
+}
+
 function openNav() {
   toggle.classList.add('open');
   navLinks.classList.add('open');
   document.body.classList.add('nav-open');
   toggle.setAttribute('aria-expanded', 'true');
+  toggle.setAttribute('aria-label', 'Close menu');
+  setBackgroundInert(true);
+  // Focus the first link once the panel is visible
+  setTimeout(() => navLinks.querySelector('a')?.focus({ preventScroll: true }), 60);
 }
 
-function closeNav() {
+function closeNav({ restoreFocus = false } = {}) {
+  if (!isOpen()) return;
   toggle.classList.remove('open');
   navLinks.classList.remove('open');
   document.body.classList.remove('nav-open');
   toggle.setAttribute('aria-expanded', 'false');
+  toggle.setAttribute('aria-label', 'Open menu');
+  setBackgroundInert(false);
+  if (restoreFocus) toggle.focus();
 }
 
 toggle?.addEventListener('click', () => {
-  toggle.classList.contains('open') ? closeNav() : openNav();
+  isOpen() ? closeNav() : openNav();
 });
 
-overlay?.addEventListener('click', closeNav);
+overlay?.addEventListener('click', () => closeNav());
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeNav();
+  if (!isOpen()) return;
+  if (e.key === 'Escape') {
+    closeNav({ restoreFocus: true });
+    return;
+  }
+  // Keep Tab cycling between the toggle and the menu links
+  if (e.key === 'Tab') {
+    const items = [toggle, ...navLinks.querySelectorAll('a')];
+    const first = items[0];
+    const last = items[items.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  }
 });
 
 navLinks?.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', closeNav);
+  a.addEventListener('click', () => closeNav());
+});
+
+// Close if the viewport grows past the mobile breakpoint (e.g. rotation)
+mobileQuery.addEventListener?.('change', (e) => {
+  if (!e.matches) closeNav();
 });
 
 // Active nav link
